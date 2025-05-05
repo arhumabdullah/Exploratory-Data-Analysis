@@ -1,53 +1,68 @@
-Diabetes Dataset Exploratory Data Analysis (EDA)
-This repository contains a simple exploratory data analysis (EDA) performed on the Pima Indians Diabetes Database. The goal of this analysis is to gain insights into the distribution and relationships of key medical attributes and the diabetes outcome.
 
-Files
-diabetes.csv: The dataset used for analysis, containing medical diagnostic information of female patients.
+# Diabetes Dataset Exploratory Data Analysis (EDA)
 
-eda.py: Python script for performing EDA on the dataset. It includes summary statistics, visualizations, and correlation analysis.
+This repository contains a simple exploratory data analysis (EDA) performed on the [Pima Indians Diabetes Database](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database). The goal of this analysis is to gain insights into the distribution and relationships of key medical attributes and the diabetes outcome.
 
-Features Analyzed
+## Files
+
+- `diabetes.csv`: The dataset used for analysis, containing medical diagnostic information of female patients.
+- `eda.py`: Python script for performing EDA on the dataset. It includes summary statistics, visualizations, and correlation analysis.
+
+## Features Analyzed
+
 The dataset includes the following features:
 
-Pregnancies
+- Pregnancies
+- Glucose
+- BloodPressure
+- SkinThickness
+- Insulin
+- BMI
+- DiabetesPedigreeFunction
+- Age
+- Outcome (1 indicates diabetes, 0 indicates no diabetes)
 
-Glucose
+## Analysis Performed
 
-BloodPressure
+The `eda.py` script includes the following steps:
 
-SkinThickness
+- Loading and inspecting the data
+- Checking for null values and data types
+- Calculating descriptive statistics for **Glucose** and **BMI**
+- Histogram of **Age** distribution
+- Heatmap of feature correlations
+- Boxplot of **Insulin** levels grouped by **Outcome**
 
-Insulin
+## Visualizations
 
-BMI
+- **Age Distribution**: Histogram showing how age is distributed in the dataset.
+- **Correlation Heatmap**: Displays relationships between features.
+- **Insulin vs Outcome**: Boxplot comparing insulin levels between diabetic and non-diabetic patients.
 
-DiabetesPedigreeFunction
+## Requirements
 
-Age
+The script uses the following Python libraries:
 
-Outcome (1 indicates diabetes, 0 indicates no diabetes)
+```bash
+pandas
+matplotlib
+seaborn
+```
 
-Analysis Performed
-The eda.py script includes the following steps:
+Install them using:
 
-Loading and inspecting the data
+```bash
+pip install pandas matplotlib seaborn
+```
 
-Checking for null values and data types
+## Usage
 
-Calculating descriptive statistics for Glucose and BMI
+To run the analysis:
 
-Histogram of Age distribution
+```bash
+python eda.py
+```
 
-Heatmap of feature correlations
+## License
 
-Boxplot of Insulin levels grouped by Outcome
-
-Visualizations
-Age Distribution: Histogram showing how age is distributed in the dataset.
-
-Correlation Heatmap: Displays relationships between features.
-
-Insulin vs Outcome: Boxplot comparing insulin levels between diabetic and non-diabetic patients.
-License
-This project is licensed under the MIT License.
-
+This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
